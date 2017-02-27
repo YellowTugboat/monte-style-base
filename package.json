@@ -1,7 +1,15 @@
 {
   "name": "monte-style-base",
   "version": "0.0.0",
+  "author": {
+    "name": "Yellow Tugboat",
+    "url": "http://www.yellowtugboat.com"
+  },
   "description": "Foundation CSS styles for Monte.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YellowTugboat/monte-style-base.git"
+  },
   "keywords": [
     "Monte",
     "Charts",
@@ -10,7 +18,6 @@
     "CSS",
     "Style"
   ],
-  "author": "Yellow Tugboat",
   "license": "MIT",
   "devDependencies": {
     "node-sass": "^4.5.0"
