@@ -1,0 +1,212 @@
+@import 'semantic_variables';
+@import 'recommended';
+
+.monte-chart {
+  font-size: $monteBaseFontSize;
+
+  // -----------------------------------------------------------------------------------------------
+  // AXIS & SUPPORT
+  // -----------------------------------------------------------------------------------------------
+  &.monte-no-domain-lines {
+    .axis .domain {
+      stroke: none;
+    }
+  }
+
+  &.monte-no-x-domain {
+    .x-axis .domain {
+      stroke: none;
+    }
+  }
+
+  &.monte-no-y-domain {
+    .y-axis .domain {
+      stroke: none;
+    }
+  }
+
+  &.monte-axis-no-ticks {
+    .axis .tick line {
+      stroke: none;
+    }
+  }
+
+  &.monte-axis-no-x-ticks {
+    .x-axis .tick line {
+      stroke: none;
+    }
+  }
+
+  &.monte-axis-no-y-ticks {
+    .y-axis .tick line {
+      stroke: none;
+    }
+  }
+
+  .axis {
+    .domain,
+    .tick line {
+      stroke: $monteAxis;
+    }
+
+    .tick text {
+      fill: $monteAxis;
+      font-size: $monteSupportFontSize;
+    }
+  }
+
+  // GRIDs and FRAMEs align with axes and axes elements (i.e. ticks) that coloring should match the
+  // axes by default.
+  .monte-gauge-frame,
+  .monte-radar-ray,
+  .monte-radar-web,
+  .monte-simple-bar-frame,
+  .monte-ext-crosshair,
+  .monte-ext-frame-line,
+  .monte-ext-grid-line,
+  .monte-ext-polar-grid-arc,
+  .monte-ext-polar-tick {
+    stroke: $monteAxis;
+  }
+
+  .monte-ext-polar-grid-arc {
+    // Explicitly state a transparent fill to avoid a display error in Chrome that creates strange
+    // partial fills.
+    fill: $monteNoInteractionFill;
+  }
+
+  .monte-gauge-frame,
+  .monte-radar-web,
+  .monte-simple-bar-frame {
+    fill: $monteNoInteractionFill;
+  }
+
+  // -----------------------------------------------------------------------------------------------
+  // BG FILL
+  // -----------------------------------------------------------------------------------------------
+
+  .monte-arc-bg,
+  .monte-arc-wedge.monte-arc-placeholder,
+  .monte-gauge-bg,
+  .monte-simple-bar-bg,
+  .monte-ext-bar-bg {
+    fill: $monteBgFill;
+  }
+
+  // -----------------------------------------------------------------------------------------------
+  // GENERAL FILLS AND STROKES
+  // -----------------------------------------------------------------------------------------------
+
+  // Strokes
+  .monte-arc-wedge,
+  .monte-line,
+  .monte-radar-area,
+  .monte-segment-bar-seg,
+  .monte-ext-polar-line {
+    stroke: $monteBasicStroke;
+  }
+
+  .monte-gauge-needle {
+    fill: $monteBasicStroke;
+  }
+
+  .monte-arc-wedge.monte-arc-placeholder, {
+    stroke: none;
+  }
+
+  .monte-arc-wedge,
+  .monte-area,
+  .monte-bar,
+  .monte-icon,
+  .monte-point,
+  .monte-radar-area,
+  .monte-segment-bar-seg {
+    fill: $monteBasicFill;
+  }
+
+  .monte-area,
+  .monte-radar-area {
+    opacity: $monteAreaOpacity;
+
+    &.over,
+    &.touch {
+      opacity: $monteAreaActiveOpacity;
+    }
+  }
+
+  // -----------------------------------------------------------------------------------------------
+  // SHARP SHAPES
+  // -----------------------------------------------------------------------------------------------
+  .monte-bar,
+  .monte-segment-bar-seg,
+  .monte-simple-bar-frame,
+  .monte-ext-crosshair,
+  .monte-ext-frame-line,
+  .monte-ext-grid-line,
+  .monte-ext-polar-line {
+    shape-rendering: crispEdges;
+  }
+
+  // -----------------------------------------------------------------------------------------------
+  // LABEL ADJUST
+  // -----------------------------------------------------------------------------------------------
+  &.monte-polar-label-centroid,
+  &.monte-polar-label-inner,
+  &.monte-polar-label-outer {
+    .monte-arc-label,
+    .monte-polar-label,
+    .monte-radar-ray-label {
+      text-anchor: middle;
+    }
+  }
+
+  .monte-arc-label,
+  .monte-bar-label {
+    text-anchor: middle;
+  }
+
+  &.monte-horizontal-bar-chart {
+    .monte-bar-label { text-anchor: middle; }
+    .monte-bar-pos .monte-bar-label { text-anchor: start; }
+    .monte-bar-neg .monte-bar-label { text-anchor: end; }
+  }
+
+  .monte-arc-label,
+  .monte-bar-label,
+  .monte-polar-label,
+  .monte-radar-radius-label,
+  .monte-radar-ray-label {
+    pointer-events: none;
+    font-size: $monteLabelFontSize;
+  }
+
+  // -----------------------------------------------------------------------------------------------
+  // INTERACTION
+  // -----------------------------------------------------------------------------------------------
+  &.monte-area-chart,
+  &.monte-line-chart,
+  &.monte-radar-area,
+  &.monte-sparkline-chart {
+    .monte-line {
+      fill: $monteNoInteractionFill;
+    }
+  }
+
+  // -----------------------------------------------------------------------------------------------
+  // EXTENSION CUSTOMIZE
+  // -----------------------------------------------------------------------------------------------
+  .monte-ext-ref-line-grp {
+    line {
+      stroke: $monteRefLine;
+    }
+
+    text {
+      fill: $monteRefLine;
+      font-size: $monteSupportFontSize;
+    }
+  }
+
+  .monte-ext-crosshair {
+    pointer-events: none;
+  }
+}

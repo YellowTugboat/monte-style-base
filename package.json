@@ -1,0 +1,22 @@
+{
+  "name": "monte-style-base",
+  "version": "0.0.0",
+  "description": "Foundation CSS styles for Monte.",
+  "keywords": [
+    "Monte",
+    "Charts",
+    "SCSS",
+    "SASS",
+    "CSS",
+    "Style"
+  ],
+  "author": "Yellow Tugboat",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  },
+  "scripts": {
+    "build-css": "node-sass --source-map dist --output-style compressed --output ./dist/ --precision 8 src/index.scss",
+    "watch-css": "npm run build-css && npm run build-css -- --watch"
+  }
+}

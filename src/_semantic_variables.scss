@@ -1,0 +1,29 @@
+@import 'raw_variables';
+
+// Fills and strokes for common features
+$monteAxis: $monteRawMedGrey;
+$monteBasicFill: $monteRawDarkGrey;
+$monteBasicStroke: $monteRawDarkerGrey;
+$monteBgFill: $monteRawOffWhite;
+
+// Annotation, reference, and grids
+$monteRefLine: $monteRawMedGrey;
+
+// Fill for areas that could have a fill depending on use, but by default have no visible fill.
+$monteNoFill: none;
+
+// Fill for areas that should not have interactions such as the fill for a line on a line chart or
+// the frame on a simple bar chart. Having a fill, even a transparent one, in those areas will cause
+// interaction issues with the elements layered below. BE CAREFUL when changing this value. It's
+// most common reason to be changed is DEBUGGING.
+$monteNoInteractionFill: none;
+
+// Font sizes
+$monteBaseFontSize: $monteRawFontSizeRegular;
+$monteSupportFontSize: $monteRawFontSizeSmall;
+$monteLabelFontSize: $monteRawFontSizeMedium;
+$monteFocusFontSize: $monteRawFontSizeLarge;
+
+// Area opacity
+$monteAreaOpacity: 0.5;
+$monteAreaActiveOpacity: 1;

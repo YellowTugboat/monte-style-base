@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------------------------
+// RECOMMENDED STYLES
+//
+// Styles that are recommended through documentation, examples, and/or convention, but are not 
+// applied by any chart or extension. 
+//
+// For example, it is common to have a large value related to a gauge, but the `GaugeChart` does 
+// not provide one. Examples use `ExtLabel` to provide such functionality, but a specific CSS 
+// classname related to gauges would be inappropriate for the extension. Therefore the example
+// specifies the class name `monte-gauge-value-label`. This name is encouraged for use broadly,
+// but no Monte functionality applies it which gives it the "Recommended Style" designation. 
+// -----------------------------------------------------------------------------------------------
+.monte-gauge-value-label {
+  text-anchor: middle;
+}
